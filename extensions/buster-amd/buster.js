@@ -8,9 +8,7 @@ config["buster-amd"] = {
     extensions: [require("buster-amd")],
     "buster-amd": {
 //        pathMapper: function (path) {
-//            console.log(path);
-//            console.log("plugin!" + path.replace(/^\//, "").replace(/\.js$/, ""));
-//            return "plugin!" + path.replace(/^\//, "").replace(/\.js$/, "");
+//            return path.replace(/\.js$/, "").replace(/^\//, "");
 //        }
     }
 };
