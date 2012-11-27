@@ -11,7 +11,7 @@ module.exports = function(grunt){
         },
         buster: {
             test: {
-                config: 'path/to/my/buster.js'
+                config: 'test/buster.js'
             },
             server: {
                 port: 1111
@@ -31,7 +31,7 @@ module.exports = function(grunt){
         },
         watch: {
             files: '<config:lint.files>',
-            tasks: 'lint qunit'
+            tasks: 'lint buster'
         },
         jshint: {
             options: {
