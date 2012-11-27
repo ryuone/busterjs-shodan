@@ -1,0 +1,12 @@
+{
+  "name": "grunt-buster",
+  "version": "0.0.0",
+  "description": "grunt-buster project.",
+  "main": "grunt.js",
+  "scripts": {
+    "test": "buster test"
+  },
+  "repository": "",
+  "author": "ryuone",
+  "license": "MIT"
+}
