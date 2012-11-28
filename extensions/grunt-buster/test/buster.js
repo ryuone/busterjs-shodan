@@ -7,13 +7,14 @@
 var config = module.exports;
 config["Browser tests"] = {
     sources: [
-        "src/twice.js"
+        "js/twice.js"
     ],
     tests: [
         "test/test*.js"
     ],
+    libs: ["lib/require.js"],
     rootPath: "../",
-    extensions: [],
+    extensions: [require("buster-amd")],
     environment: "browser" // "browser" or "node"
 };
 config["Node tests"] = {

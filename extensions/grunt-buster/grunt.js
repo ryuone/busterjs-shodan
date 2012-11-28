@@ -7,7 +7,7 @@ module.exports = function(grunt){
             banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd") %>\n' + '<%= pkg.homepage ? "* " + pkg.homepage + "\n" : "" %>' + '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' + ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */'
         },
         lint: {
-            files: ['grunt.js', 'lib/**/*.js', 'test/**/*.js']
+            files: ['grunt.js', 'lib/**/*.js', 'js/**/*.js']
         },
         buster: {
             test: {
@@ -19,7 +19,7 @@ module.exports = function(grunt){
         },
         concat: {
             dist: {
-                src: ['<banner:meta.banner>', '<file_strip_banner:lib/<%= pkg.name %>.js>'],
+                src: ['<banner:meta.banner>', 'js/*.js'],
                 dest: 'dist/<%= pkg.name %>.js'
             }
         },
@@ -52,7 +52,10 @@ module.exports = function(grunt){
         uglify: {}
     });
     // Default task.
-    grunt.registerTask('default', 'lint buster concat min');
+//    grunt.registerTask('default', 'lint buster concat min');
+    grunt.registerTask('default', 'concat min');
 
+    grunt.loadNpmTasks('grunt-contrib');
+    grunt.loadNpmTasks('grunt-requirejs');
     grunt.loadNpmTasks('grunt-buster');
 };
