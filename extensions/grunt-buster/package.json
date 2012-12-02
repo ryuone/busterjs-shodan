@@ -1,12 +1,25 @@
 {
-  "name": "grunt-buster",
-  "version": "0.0.0",
-  "description": "grunt-buster project.",
-  "main": "grunt.js",
-  "scripts": {
-    "test": "buster test"
-  },
-  "repository": "",
-  "author": "ryuone",
-  "license": "MIT"
+    "name": "grunt-buster",
+    "version": "0.1.0",
+    "description": "grunt-buster project.",
+    "main": "grunt.js",
+    "scripts": {
+        "test": "buster test"
+    },
+    "repository": "",
+    "author": "ryuone",
+    "license": "MIT",
+    "directories": {
+        "test": "test"
+    },
+    "dependencies": {
+        "amdefine": "~0.0.4",
+        "buster": "~0.6.3",
+        "buster-amd": "~0.2.0",
+        "requirejs": "~2.1.2",
+        "grunt-buster": "~0.1.2",
+        "grunt-contrib": "~0.3.0",
+        "grunt-requirejs": "~0.2.14"
+    },
+    "devDependencies": {}
 }
