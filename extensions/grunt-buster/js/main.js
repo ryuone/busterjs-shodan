@@ -6,6 +6,6 @@
  */
 require({
     baseUrl: requirejs.isBrowser ? '../' : './'
-}, ["js/twice"], function(twice){
-    console.log(twice.twice(100));
+}, ["js/double"], function(double){
+    console.log(double.double(100));
 });
