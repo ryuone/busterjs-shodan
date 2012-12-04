@@ -7,18 +7,16 @@
 if(typeof module == "object" && typeof require == "function"){
     var buster = require("buster");
     var assert = buster.assertions.assert;
-    var requirejs = require('requirejs');
+    var define = require('amdefine')(module);
 }
-requirejs({
-    baseUrl: requirejs.isBrowser ? './' : './'
-}, ["js/twice"], function(twice){
-    buster.testCase("UNIT base module", {
+define(["../js/double"], function(double){
+    buster.testCase("Double UNIT base module", {
         setUp: function(){
         },
         tearDown: function(){
         },
-        "get twice value": function(){
-            assert.equals(twice.twice(10), 20)
+        "get double value": function(){
+            assert.equals(double.double(10), 20)
         }
     });
 });

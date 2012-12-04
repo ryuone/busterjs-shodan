@@ -71,13 +71,14 @@ module.exports = function (grunt) {
             uglify: {
             }
         }
-    )
-    ;
-// Default task.
-//    grunt.registerTask('default', 'lint buster concat min');
-    grunt.registerTask('default', 'concat min');
+    );
+
     grunt.loadNpmTasks('grunt-contrib');
     grunt.loadNpmTasks('grunt-requirejs');
     grunt.loadNpmTasks('grunt-buster');
+// Default task.
+//    grunt.registerTask('default', 'lint buster concat min');
+    grunt.registerTask('default', 'concat min');
+    grunt.registerTask('build', 'requirejs');
 }
 ;

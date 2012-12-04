@@ -7,7 +7,8 @@
 var config = module.exports;
 config["Browser tests"] = {
     sources: [
-        "js/twice.js"
+        "js/double.js",
+        "js/triple.js"
     ],
     tests: [
         "test/test*.js"
